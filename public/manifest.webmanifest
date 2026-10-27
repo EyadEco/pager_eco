@@ -1,0 +1,10 @@
+{
+  "name": "ANN Cafe & Bakery",
+  "short_name": "ANN Cafe",
+  "start_url": "/order",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf5",
+  "theme_color": "#927c40",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

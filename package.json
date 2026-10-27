@@ -1,0 +1,13 @@
+{
+  "name": "nidaa-pager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A phone-first order pager with web push notifications.",
+  "scripts": {
+    "start": "node server.js",
+    "keys": "web-push generate-vapid-keys --json"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "web-push": "3.6.7" }
+}
+
