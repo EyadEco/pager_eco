@@ -8,9 +8,16 @@ The home page presents the product. The cashier demo is at `/staff`; a customer 
 
 1. Install Node.js 18 or newer.
 2. In this folder, run `npm install` and `npm start`.
-3. Open `http://localhost:3000` for the product page, `http://localhost:3000/staff` for the cashier desk, and `http://localhost:3000/order` for the customer order page. Set `PORT` if port 3000 is occupied. The default staff PIN is `2468`; change it by setting `STAFF_PIN` before starting.
+3. Open `http://localhost:3000` for the product page, `http://localhost:3000/staff` for the cashier desk, and `http://localhost:3000/order` for the customer order page. Set `PORT` if port 3000 is occupied.
 
 In the cashier desk, enter the receipt order number and items, then select **Create order & show QR**. Each order gets its own QR linking directly to that order. The customer scans it or uses the order number fallback. Select **Mark ready** to send the alert. If the customer misses it, select **Re-alert** on that ready order to send another notification. The ready-order row shows linked phones, alert attempts, and notifications accepted by the push service. A small interactive product preview also appears on the home page.
+
+## Demo login and push flow
+
+- Cashier page: `/staff`
+- Demo staff PIN: `2468` (unless `STAFF_PIN` is set in the server environment)
+- To try a push alert, create an order in the cashier page, open its QR link on a phone using the same HTTPS site, select **Enable lock-screen alert**, and allow notifications. Back at the cashier page, select **Mark ready** or **Re-alert**.
+- The server must have VAPID keys configured for push. Generate a key pair with `npm run keys` and configure it as described below. Private keys and order data are local-only and must not be committed.
 
 ## Enable lock-screen notifications
 
